@@ -6,7 +6,10 @@ main{
 	position: relative;
 	margin: 0 auto;
 }
-
+.container1{
+	display: block;
+	overflow: hidden;
+}
 /*фото */
 .foto{
 	margin: 0 auto;
@@ -21,6 +24,7 @@ main{
 .wrapper1{
 	/*	width: 100%;*/
 	background: #5e426a;
+	margin-top: 215px;
 }
 .wrapper__block{ 
 	position: relative;
@@ -183,6 +187,10 @@ main{
 }
 
 /*центарльній блок с новостями*/
+.wrapper--news {
+	/*	width: 100%;*/
+	background: #ececec;
+}
 .wrapper--news .wrapper__block{
 	/*	background: yellow;*/
 	background: #ececec;
@@ -194,7 +202,7 @@ main{
 	/*	background:grey;*/
 	/*	background: #ececec;*/
 	width: 30%;
-	height: 400px;
+	height: 390px;
 	color:#787878;
 }
 .article2{
@@ -242,14 +250,14 @@ header{
 }
 navigation{
 	float: right;
-	width: 625px;
+	width: 600px;
 	margin-top: 3%;
 }
 .navigation__menu a{
 	display:block;
 	float: left;
 	line-height: 45%;
-	margin: 0 0 0 8%;
+	margin: 0 0 0 7.5%;
 	text-decoration: none;
 	color: white;
 	font-size: 24px;
@@ -280,7 +288,8 @@ footer navigation{
 	margin: 5% 0 5% 0 ;
 }
 footer .navigation__menu a{
-	margin: 0 0 0 4.5%;
+	margin: 0 0 0 6.5%;
+	font-size: 20px;
 }
 footer p{
 	display: block;
@@ -335,10 +344,10 @@ footer p{
 
 
 /*масштабирование */
-@media screen and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 	navigation{
 		float: left;
-		width: 90%;
+		width: 200%;
 	}
 	.navigation__menu a{
 		margin: 0 0 0 2%;
@@ -372,16 +381,32 @@ footer p{
 	}
 }
 
-
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px){
 	.header__logo{
-		width: 100%;
+		float: none;
 	}
 	.header__link{
 		width: 155px;
 		margin: 0 auto;
 	}
+	.about1,.about2,.about3{
+		width: 90%;
+		margin: 8% auto;
+		float: none;
+	}
+	footer p{
+		float: none;
+		width: 110px;
+		margin: 5% auto;
+	}
+	.article1, .article2, .article3{
+		width: 96%;
+		margin: 2%;
+		height: auto;
+	}
+}
 
+@media (min-width: 321px) and (max-width: 480px) {
 	navigation{
 		position: absolute;
 		border-radius: 10px;
@@ -412,16 +437,7 @@ footer p{
 	footer navigation{
 		display: none;
 	}
-	footer p{
-		float: none;
-		width: 110px;
-		margin: 5% auto;
-	}
-	.about1,.about2,.about3{
-		width: 90%;
-		margin: 8% auto;
-		float: none;
-	}
+
 	.wrapper__text{
 		height: 75px;
 	}
@@ -442,7 +458,7 @@ footer p{
 	}
 	.logos a {
 		width: 22%;
-		margin: 5% 1.5% 0;
+		margin: 5% 0.5% 0;
 	}
 	.logos .logo1{
 		margin-left: 13%;
@@ -452,7 +468,7 @@ footer p{
 	}
 }
 
-@media screen and (max-width: 321px) {
+@media (max-width: 320px) {
 	.article1, .article2, .article3{
 		display: none;
 	}
@@ -489,4 +505,17 @@ footer p{
 		color:white;
 		font-size: 28px;
 	}
+	.foto__line{
+		background: none;
+	}
 }
+
+@media (min-width: 961px){
+	.container1,.container2,.wrapper__block,.footer__block, .wrapper--news .wrapper__block{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.logos{
+		width: 960px;
+		margin: 2% auto;
+	}
